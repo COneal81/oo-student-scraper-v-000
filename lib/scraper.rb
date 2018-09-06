@@ -22,7 +22,7 @@ end
     	student_list = {}
       html = Nokogiri::HTML(open(profile_url))
     
-      html.css("div.main-wrapper.profile.social-icon-container a").each do |student|
+      html.css("div.social-icon-container a").each do |student|
        if student.attribute("href").value.include?("twitter")
          student_list[:twitter] = student.attribute("href").value
       elsif student.attribute("href").value.include?("linkedin")
