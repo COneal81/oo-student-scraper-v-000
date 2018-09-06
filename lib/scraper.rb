@@ -24,12 +24,12 @@ end
     
       html.css("div.mail-wrapper.profile.social-icon-container a").each do |info|
        if info.attribute("href").value.include?("twitter")
-         student_list[:twitter] = student.attribute("href").value
+         student_list[:twitter] = info.attribute("href").value
       elsif info.attribute("href").value.include?("linkedin")
-      student_list[:linkedin] = student.attribute("href").value
+      student_list[:linkedin] = info.attribute("href").value
       elsif info.attribute("href").value.include?("github")
-      student_list[:github] = student.attribute("href").value 
-    else student_list[:blog] = student.attribute("href").value
+      student_list[:github] = info.attribute("href").value 
+    else student_list[:blog] = info.attribute("href").value
   end
 end
   student_list[:profile_quote] = html.css("div.main-wrapper.vitals-text-container.profile-quote").text
