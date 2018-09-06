@@ -19,7 +19,7 @@ end
 
 
   def self.scrape_profile_page(profile_url)
-    	students_list = {}
+    	student_list = {}
       html = Nokogiri::HTML(open(profile_url))
     
       html.css("div.social-icon-controler a").each do |student|
