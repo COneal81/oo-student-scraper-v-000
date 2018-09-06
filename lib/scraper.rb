@@ -31,7 +31,6 @@ end
     end
         students_list[:profile_quote] = html.css("div.profile-quote").text
         students_list[:bio] = html.css("div.bio-content p").text
-    
+    students_list
   end
-  s
-endtudents_list
+end
