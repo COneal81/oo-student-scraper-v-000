@@ -15,7 +15,6 @@ class Scraper
             student_list << student_hash
         end
     student_list
-  end
 end
 
 
