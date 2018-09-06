@@ -32,8 +32,8 @@ end
     else student_list[:blog] = student.attribute("href").value
   end
 end
-  student_list[:profile_quote] = html.css("div.mail-wrapper.vitals-text-container.profile-quote").text
-  student_list[:bio] = html.css("div.bio-content p").text 
+  student_list[:profile_quote] = html.css("div.main-wrapper.vitals-text-container.profile-quote").text
+  student_list[:bio] = html.css("div.main-wrapper.profile.description-holder p").text 
   student_list
 end
 end
