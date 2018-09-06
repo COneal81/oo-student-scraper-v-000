@@ -23,16 +23,6 @@ end
       html = Nokogiri::HTML(open(profile_url))
     
       html.css("div.social-icon-controler a").each do |student|
-        url = student.attribute("href").value
-        students_list[:twitter] = url if url.include?("twitter")
-        
-        students_list[:linkedin] = url if url.include?("linkedin")
-        students_list[:github] = url if url.include?("github")
-        students_list[:blog] = url if student.css("img").attribute("src").text.include?("rss")
-      end
-    end
-        students_list[:profile_quote] = html.css("div.profile-quote").text
-        students_list[:bio] = html.css("div.bio-content p").text
-    students_list
+       if 
   end
 end
