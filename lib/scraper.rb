@@ -22,12 +22,12 @@ end
     	student_list = {}
       html = Nokogiri::HTML(open(index_url))
     
-      html.css("div.mail-wrapper.profile.social-icon-container a").each do |student|
-       if student.attribute("href").value.include?("twitter")
+      html.css("div.mail-wrapper.profile.social-icon-container a").each do |info|
+       if info.attribute("href").value.include?("twitter")
          student_list[:twitter] = student.attribute("href").value
-      elsif student.attribute("href").value.include?("linkedin")
+      elsif info.attribute("href").value.include?("linkedin")
       student_list[:linkedin] = student.attribute("href").value
-      elsif student.attribute("href").value.include?("github")
+      elsif info.attribute("href").value.include?("github")
       student_list[:github] = student.attribute("href").value 
     else student_list[:blog] = student.attribute("href").value
   end
