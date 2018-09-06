@@ -33,4 +33,4 @@ class Scraper
         students_list[:bio] = html.css("div.bio-content p").text
     students_list
   end
-end	end
+end
