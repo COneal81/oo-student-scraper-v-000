@@ -32,5 +32,5 @@ end
     else student_list[:blog] = student.attribute("href").value
   end
 end
-  
+  student_list[:profile_quote] = html.css("")
     
