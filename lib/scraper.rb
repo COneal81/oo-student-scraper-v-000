@@ -25,7 +25,7 @@ class Scraper
       url = student.attribute("href")
       student_list[:twitter_url] = url if url.include?("twitter")
       student_list[:linkedin_url] = url if url.include?("linkedin")
-      student_list[:github_url] url = if url.include?("github")
+      student_list[:github_url] = url if url.include?("github")
       student_list[:blog_url] = url if student.css("img").attribute("src").text.include?(rss)
     end
       student_list[:profile_quote] html.css("div.profile-quite").text
