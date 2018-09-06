@@ -16,11 +16,12 @@ class Scraper
         end
     student_list
   end
+end
 
 
   def self.scrape_profile_page(profile_url)
     	    students_list = {}
-  end	
+
      html = Nokogiri::HTML(open(profile_url))
     html.css("div.social-icon-controler a").each do |student|
         url = student.attribute("href")
