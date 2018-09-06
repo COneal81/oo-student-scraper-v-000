@@ -33,5 +33,5 @@ end
         students_list[:bio] = html.css("div.bio-content p").text
     
   end
-  students_list
-end
+  s
+endtudents_list
