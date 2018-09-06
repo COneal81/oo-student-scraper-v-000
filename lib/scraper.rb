@@ -23,9 +23,9 @@ end
       html = Nokogiri::HTML(open(profile_url))
     
       html.css("div.social-icon-controler a").each do |student|
-        url = student.attribute("href")
-        students_list[:twitter] = if url.include?("twitter")
-        return url
+        url = student.attribute("href").value
+        students_list[:twitter] = url if url.include?("twitter")
+        
         students_list[:linkedin] = url if url.include?("linkedin")
         students_list[:github] = url if url.include?("github")
         students_list[:blog] = url if student.css("img").attribute("src").text.include?("rss")
