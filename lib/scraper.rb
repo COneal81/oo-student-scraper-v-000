@@ -20,7 +20,7 @@ end
 
   def self.scrape_profile_page(profile_url)
     	student_list = {}
-      html = Nokogiri::HTML(open(index_url))
+      html = Nokogiri::HTML(open(profile_url))
     
       html.css("div.mail-wrapper.profile.social-icon-container a").each do |info|
        if info.attribute("href").value.include?("twitter")
