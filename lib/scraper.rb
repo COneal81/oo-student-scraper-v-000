@@ -26,7 +26,8 @@ class Scraper
       student_list[:twitter_url] url if url.include?("twitter")
       student_list[:linkedin_url] url if url.include?("linkedin")
       student_list[:github_url] url if url.include?("github")
-      
+      student_list[:blog_url]
+      student_list[]
     }
     
   end
