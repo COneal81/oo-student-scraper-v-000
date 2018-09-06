@@ -21,7 +21,7 @@ class Scraper
   def self.scrape_profile_page(profile_url)
     html = Nokogiri::HTML(open(profile_url))
     
-    html.css(".   ")
+    
     student_profile_list = {
       student_list[:twitter_url] url if url.include?("twitter")
       student_list[:linkedin_url] url if url.include?("linkedin")
@@ -31,7 +31,7 @@ class Scraper
       student_list[:bio]html.css("div.bio-content.content-holder p").text
     }
     
-  end
+
 
 end
 
