@@ -19,10 +19,10 @@ end
 
 
   def self.scrape_profile_page(profile_url)
-    	    students_list = {}
-
-     html = Nokogiri::HTML(open(profile_url))
-    html.css("div.social-icon-controler a").each do |student|
+    	students_list = {}
+      html = Nokogiri::HTML(open(profile_url))
+    
+      html.css("div.social-icon-controler a").each do |student|
         url = student.attribute("href")
         students_list[:twitter_url] = url if url.include?("twitter")
         students_list[:linkedin_url] = url if url.include?("linkedin")
