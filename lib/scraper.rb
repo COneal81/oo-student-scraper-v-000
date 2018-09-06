@@ -23,10 +23,10 @@ class Scraper
     html.css("div.vitals-container").each do |student|
       url = student.attribute("href")
     student_profile_list = {
-      student_list[:twitter_url] url if url.include?("twitter")
-      student_list[:linkedin_url] url if url.include?("linkedin")
-      student_list[:github_url] url if url.include?("github")
-      student_list[:blog_url] url if student.css("img").attribute("src").text.include?(rss)
+      student_list[:twitter_url] = url if url.include?("twitter")
+      student_list[:linkedin_url] = url if url.include?("linkedin")
+      student_list[:github_url] url = if url.include?("github")
+      student_list[:blog_url] = url if student.css("img").attribute("src").text.include?(rss)
     end
       student_list[:profile_quote] html.css("div.profile-quite").text
       student_list[:bio]html.css("div.bio-content.content-holder p").text
